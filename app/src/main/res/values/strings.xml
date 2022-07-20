@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AtmApplication</string>
+    <string name="enter_your_withdraw_amount">Enter your withdraw amount</string>
+</resources>
