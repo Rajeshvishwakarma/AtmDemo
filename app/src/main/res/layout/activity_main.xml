@@ -9,6 +9,10 @@
             name="data"
             type="com.app.atmapplication.db.AtmData" />
 
+        <variable
+            name="viewmodel"
+            type="com.app.atmapplication.ui.AtmViewModel" />
+
     </data>
 
 
@@ -168,10 +172,11 @@
             android:hint="@string/enter_your_withdraw_amount"
             app:helperTextEnabled="true">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            <EditText
                 android:id="@+id/etWithDrow"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={viewmodel.edittext}"
                 android:textSize="@dimen/_20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -183,6 +188,7 @@
             android:layout_marginHorizontal="@dimen/_30dp"
             android:layout_marginTop="@dimen/_15dp"
             android:background="@drawable/btn_r"
+            android:onClick="@{()->viewmodel.update()}"
             android:text="withdrow" />
 
     </LinearLayout>
