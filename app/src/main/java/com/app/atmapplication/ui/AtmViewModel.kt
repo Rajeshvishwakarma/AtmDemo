@@ -59,6 +59,7 @@ class AtmViewModel(private val repository: AtmRepository) : ViewModel() {
                 amount -= note500 * 500;
             }
             amount >= 200 -> {
+
                 note200 = amount / 200;
                 amount -= note200 * 200;
             }
